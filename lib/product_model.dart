@@ -1,5 +1,3 @@
-
-
 class Product{
   final String id , name, photo, description, price;
   int weight;
