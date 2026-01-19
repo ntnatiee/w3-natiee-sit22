@@ -10,7 +10,10 @@ class ApiService{
 
     if(respone.statusCode==200){
       final List data = jsonDecode(respone.body);
-      return data.map((e) => Product.formJson(e)).toList();
+      // print("testtest ${data}");
+      // List a = data.map((e) => Product.fromJson(e)).toList();
+      // print("dataaaaaaaa ${a}");
+      return data.map((e) => Product.fromJson(e)).toList();
     }else{
       throw Exception('fail');
     }

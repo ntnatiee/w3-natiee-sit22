@@ -63,9 +63,11 @@ class _MyHomePageState extends State<MyHomePage> {
             );
           }
 
+          print("data ${snapshot.data}");
+
           if(snapshot.hasError){
             return Center(
-              child: Text("Erro"),
+              child: Text(snapshot.error.toString()),
             );
           }
 

@@ -1,8 +1,8 @@
-import 'dart:ffi';
+
 
 class Product{
-  final String id , name, photo, description;
-  Float weight, price;
+  final String id , name, photo, description, price;
+  int weight;
 
   Product({
     required this.id,
@@ -12,7 +12,7 @@ class Product{
     required this.weight,
     required this.description,
 });
-  factory Product.formJson(Map<String, dynamic>json){
+  factory Product.fromJson(Map<String, dynamic>json){
     return Product(
         id: json['id'],
         name: json['name'],
